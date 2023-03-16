@@ -33,11 +33,8 @@
 }
 
 .section h1{
-    border: 1px solid #000;
-    width: 20%;
     padding: 1rem 1rem;
     color: #ffff;
-    background-color: #000;
 }
 
 .inputplace{
