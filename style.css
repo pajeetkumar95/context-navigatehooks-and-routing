@@ -27,6 +27,10 @@
     color: #000;
 }
 
+.section{
+    background-color: #000;
+    color: #fff;
+}
 
 .section h1{
     border: 1px solid #000;
