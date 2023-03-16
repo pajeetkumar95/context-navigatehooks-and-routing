@@ -1,3 +1,4 @@
+import { Password } from '@mui/icons-material'
 import React from 'react'
 import {useState} from 'react'
 
@@ -9,6 +10,12 @@ function Login() {
   function handleclick(e){
     e.preventDefault()
     const datastored = JSON.parse(localStorage.getItem('userdetails'))
+    console.log(datastored)
+    if(datastored.userdetails ===username && datastored.userdetails === userpassword)
+    {alert('user Sucessfully Add')}
+    else{
+      alert('error')
+    }
 
   }
 
@@ -16,7 +23,7 @@ function Login() {
 
     <div className='inputholder'>
       <form onSubmit={handleclick}>
-        <input type='text' placeholder='Enter Your Name' value={username} onChange={(e)=>{setUserName(e.target.value)}}>
+        <input type='name' placeholder='Enter Your Name' value={username} onChange={(e)=>{setUserName(e.target.value)}}>
         </input><br></br>
         <input type='password' placeholder='Enter Your Password' value={userpassword} onChange={(e)=>{setUserPassword(e.target.value)}}>
         </input><br></br>
