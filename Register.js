@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { Ecommercecontext } from './App'
+import { useNavigate } from 'react-router-dom'
 
 function Register() {
 
@@ -13,6 +14,7 @@ function Register() {
   let [password, setPassword] = useState('')
 
   const { form, setForm } = useContext(Ecommercecontext)
+  const navigate = useNavigate()
 
   useEffect(() => {
     localStorage.setItem('userdetails',JSON.stringify(form))
@@ -20,14 +22,13 @@ function Register() {
 
   function handlesubmit(e) {
     e.preventDefault()
-    
+    navigate('/login')
     const userdetails = {
       name: name,
       email: email,
       user: user,
       password: password
     }
-    
     setForm(userdetails)
     console.log(form)
     

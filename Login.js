@@ -1,4 +1,4 @@
-import { Password } from '@mui/icons-material'
+// import { Password } from '@mui/icons-material'
 import React from 'react'
 import {useState} from 'react'
 
@@ -12,7 +12,7 @@ function Login() {
     const datastored = JSON.parse(localStorage.getItem('userdetails'))
     console.log(datastored)
     if(datastored.userdetails ===username && datastored.userdetails === userpassword)
-    {alert('user Sucessfully Add')}
+    { alert('user Sucessfully Add')}
     else{
       alert('error')
     }
