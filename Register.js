@@ -38,13 +38,13 @@ function Register() {
   return (
     <div className='inputplace'>
       <form onSubmit={handlesubmit}>
-        <input type='text' placeholder='Enter Your Name' onChange={(e) => { setName(e.target.value) }} value={name}>
+        <input type='text' placeholder='Enter Your Name' required onChange={(e) => { setName(e.target.value) }} value={name}>
         </input><br></br>
-        <input type='email' placeholder='Enter Your Email' onChange={(e) => { setEmail(e.target.value) }} value={email}>
+        <input type='email' placeholder='Enter Your Email' required onChange={(e) => { setEmail(e.target.value) }} value={email}>
         </input><br></br>
-        <input type='name' placeholder='Enter User Name' onChange={(e) => { setUser(e.target.value) }} value={user}>
+        <input type='name' placeholder='Enter User Name' required onChange={(e) => { setUser(e.target.value) }} value={user}>
         </input><br></br>
-        <input type='password' placeholder='Enter Password' onChange={(e) => { setPassword(e.target.value) }} value={password}>
+        <input type='password' placeholder='Enter Password' required onChange={(e) => { setPassword(e.target.value) }} value={password}>
         </input><br></br>
         <button type='Submit'>Register</button>
       </form>
